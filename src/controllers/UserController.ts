@@ -14,7 +14,7 @@ class UserController {
         })
 
         if (userAlreadyExists) {
-            res.status(400).json({
+            return res.status(400).json({
                 error: "User already exists!"
             })
         }
