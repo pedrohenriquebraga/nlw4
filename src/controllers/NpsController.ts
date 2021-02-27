@@ -24,14 +24,24 @@ class NpsController {
 
         const totalAnwers = surveysUsers.length
 
-        const calculate = Number((((promoters - detractor) / totalAnwers) * 100).toFixed(2))
+        const calculate = Math.floor(((promoters - detractor) / totalAnwers) * 100)
+        let NpsStatus = ''
+
+        if (calculate >= 0 && calculate < 50) {
+            NpsStatus = "Bad"
+        } else if (calculate >= 50 || calculate < 80) {
+            NpsStatus = "Good"
+        } else {
+            NpsStatus = "Excellent"
+        }
 
         return res.json({
             detractor,
             promoters,
             passive,
             totalAnwers,
-            nps: calculate
+            nps: calculate,
+            status: NpsStatus
         })
 
     }

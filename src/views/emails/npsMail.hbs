@@ -1,6 +1,13 @@
 <style>
     .container {
-        width: 800px;
+        background: #eee;
+        padding: 15px;
+        border: 1px solid #ececec;
+        border-radius: 8px;
+        font-family: "Arial", sans-serif;
+        font-size: 18px;
+        width: 100%;
+        max-width: 800px;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -9,28 +16,42 @@
         align-content: center;
     }
 
-    .value {
-        padding: 10px;
+    .container p {
         margin: 5px;
+    }
+
+    .value {
+        display: block;
+        padding: 10px;
+        margin: 0 5px 0 0;
         background: #8257e6;
         color: #fff;
         border-radius: 6px;
+        border: 2px solid #8257e6;
         width: 15px;
         text-align: center;
         text-decoration: none;
+        transition: 200ms
+    }
+
+    .value:hover {
+        background: #eee;
+        border: 2px solid #8257e6;
+        color: #8257e6;
     }
 
     .level {
         display: flex;
         margin: 10px;
         justify-content: space-between;
-        width: 320px;
+        width: 350px;
     }
-    
+
     .answers {
         width: 320px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 
@@ -39,7 +60,8 @@
 
     <h3>{{ title }}</h3>
     <br>
-    <strong>{{ description }}</strong>
+    <p><strong>{{ description }}</strong>
+        <p />
 
     <div class="level">
         <span>Pouco provável</span>
@@ -62,5 +84,5 @@
     <br>
     <br>
     <strong>Sua opinião é muito importante para nós!</strong>
-    <h3>Equipe! <strong>NLW</strong></h3>
+    <h3>🚀 Equipe <strong>NLW</strong>!!</h3>
 </div>

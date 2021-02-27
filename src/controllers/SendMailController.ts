@@ -6,10 +6,22 @@ import { UsersRepository } from "../repositories/UserRepository"
 import { resolve } from "path"
 import SendMailService from "../services/SendMailService"
 import { AppError } from "../errors/AppError"
+import * as Yup from "yup"
 
 class SendMailController {
     async execute(req: Request, res: Response) {
         const { email, survey_id } = req.body
+
+        const schema = Yup.object().shape({
+            email: Yup.string().email().required(),
+            survey_id: Yup.string().required()
+        })
+
+        try {
+            await schema.validate(req.body, { abortEarly: false })
+        } catch (error) {
+            throw new AppError(error)
+        }
 
         const usersRepository = getCustomRepository(UsersRepository)
         const surveyRepository = getCustomRepository(SurveysRepository)
