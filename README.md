@@ -1,6 +1,6 @@
 # 🚀 NLW4
 
-Este é a 4° edição da NLW _(Next Level Week)_ promovido pela Rocketseat, uma Instituição Educacional de Tecnologia. Foi um evento com duração de 7 dias, cada um deles era ensinado algo totalmente novo.S
+Este é a 4° edição da NLW _(Next Level Week)_ promovido pela Rocketseat, uma Instituição Educacional de Tecnologia. Foi um evento com duração de 7 dias, cada um deles era ensinado algo totalmente novo.
 
 ## 👨‍💻 O que foi desenvolvido?
 
